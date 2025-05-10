@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TestApp</string>
+    <!-- Login -->
+    <string name="iniciosesion">Inicio Sesión</string>
+    <string name="bienvenida">Bienvenido a CarCare</string>
+    <string name="hint_usuario">Usuario</string>
+    <string name="ic_user">Icono de Usuario</string>
+    <string name="hint_contraseña">Contraseña</string>
+    <string name="ic_password">Icono de Contraseña</string>
+    <string name="olvidastecontra">¿Olvidaste tu contraseña?</string>
+    <string name="bttminiciar">Iniciar</string>
+    <string name="nocuenta">¿No tienes una cuenta?</string>
+    <string name="registrate">Regístrate</string>
+
+    <!-- Registro -->
+    <string name="companero">Tu compañero digital para un auto</string>
+    <string name="excelenteestado">siempre en excelente estado</string>
+    <string name="sicuenta">¿Ya tienes una cuenta?</string>
+    <string name="bttmregistrar">Registrar</string>
+
+    <!-- Main -->
+    <string name="titulo_main">Mis autos</string>
+    <string name="carcare">CarCare</string>
+    <string name="placa">XXX-XXX</string>
+    <string name="sistemacarro">Automatico||</string>
+    <string name="marca">Mercedes Beans||</string>
+    <string name="modelo">EQE</string>    <string name="ver">Ver</string>
+    <string name="descripcion_todoterreno">Imagen de un todoterreno</string>
+    <string name="descripcion_coche">Imagen de un coche</string>
+    <string name="plus_button_description">Agregar un nuevo registro de carro</string>
+    <string name="boton_ia">Boton de IA</string>
+
+    <!-- Registro car -->
+    <string name="registrar_car">Registrar auto</string>
+    <string name="placa_man">Placa</string>
+    <string name="año">Año</string>
+    <string name="marca_man">Marca</string>
+    <string name="modelo_man">Modelo</string>
+    <string name="sistema">Sistema</string>
+    <string name="hint_placa">Ejemplo: ABC123</string>
+    <string name="hint_año">Año de modelo</string>
+    <string name="hint_modelo">Ejm: Corolla, Civic</string>
+    <string name="hint_marca">Ejm: Toyota, Honda</string>
+    <string name="hint_sistema">Automático o mecánico</string>
+
+    <!-- Mosaico -->
+    <string name="descripcion_flecha">Flecha que indica la dirección hacia atras</string>
+    <string name="titulo_mante">Mantenimiento</string>
+    <string name="descripcion_boton_todo">Boton que selecciona todos los mantenimientos</string>
+    <string name="aceites">Aceites y filtros</string>
+    <string name="refrigeracion">Refrigeración</string>
+    <string name="frenos">Frenos</string>
+    <string name="fajas">Fajas y cadenas</string>
+    <string name="bujias">Bujías</string>
+    <string name="neumaticos">Neumáticos</string>
+    <string name="transmision">Sistema de Transmisión</string>
+    <string name="electrico">Sistema Eléctrico</string>
+    <string name="bttmregistrarmanten">Registrar mantenimiento</string>
+
+    <!-- Registro mantenimiento -->
+    <string name="registrar_mantenimiento">Registrar mantenimiento</string>
+    <string name="tipo_mantenimiento">Tipo de mantenimiento</string>
+    <string name="mantenimiento">Mantenimiento</string>
+    <string name="fecha_mantenimiento">Fecha de mantenimiento</string>
+    <string name="Kilometraje">Kilometraje(km)</string>
+    <string name="kilo_actual">Actual</string>
+    <string name="kilo_prox">Próximo</string>
+    <string name="Fecha_proximo_mantenimiento">Fecha del próximo mantenimiento</string>
+    <string name="Notas">Notas</string>
+    <string name="Costo">Costo</string>
+    <string name="Monto">Digita monto</string>
+    <string name="fecha_actual">Actual</string>
+    <string name="fecha_prox">Próximo</string>
+    <string name="ejm_tipo">Escoge tipo</string>
+    <string name="hint_dato">Escribe aqui...</string>
+
+    <!-- Historial -->
+    <string name="historial">Historial</string>
+
+    <!-- AI Recomendaciones -->
+    <string name="Recomendaciones">Recomendaciones</string>
+    <string name="Texto_generado">Aquí se verá el texto generado con IA</string>
+    <string name="Generar">Generar ✧˚˖͙֒</string>
+</resources>

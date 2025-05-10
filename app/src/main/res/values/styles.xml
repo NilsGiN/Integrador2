@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema del DatePickerDialog -->
+    <style name="CustomDatePickerDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:datePickerStyle">@style/CustomDatePicker</item>
+        <item name="colorAccent">@color/colorEnd2</item> <!-- Botones OK/Cancelar -->
+    </style>
+
+    <!-- Estilo del DatePicker -->
+    <style name="CustomDatePicker" parent="android:Widget.Material.DatePicker">
+        <item name="android:textColorPrimary">@color/back_layout</item> <!-- Texto principal -->
+        <item name="android:textColorSecondary">@color/colorHolder</item> <!-- Días deshabilitados -->
+        <item name="android:background">@color/white</item> <!-- Fondo -->
+        <item name="android:headerBackground">@color/colorEnd2</item> <!-- Encabezado -->
+    </style>
+</resources>

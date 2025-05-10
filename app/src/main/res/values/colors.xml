@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#F2F2F2</color>
+    <color name="colorHolder">#A8AFB9</color>
+    <color name="colorStart">#182724</color>
+    <color name="colorEnd">#05CAAD</color>
+
+    <color name="colorStart2">#F0EFF6</color>
+    <color name="colorEnd2">#24252a</color>
+    <color name="front_layout_primary">#24252a</color>
+    <color name="back_layout">#ffffff</color>
+
+    <color name="back_cardview_1">#d6d1fc</color>
+    <color name="back_cardview_2">#24252a</color>
+    <color name="back_cardview_3">#feedba</color>
+
+    <color name="text_on_dark">#F7F8FA</color>
+    <color name="text_on_light">#12001F</color>
+
+
+    <color name="colorNegrita">#040415</color>
+    <color name="colorGris">#EBECEDFF</color>
+    <color name="textColorHint">#52040415</color>
+    <color name="backgroundTint">#EAEBEC</color>
+    <color name="text_mantenimientos">#2C796E</color>
+    <color name="text_historial">#08B199</color>
+    <color name="cuadro_fechas">#CEF4EF</color>
+    <color name="text_km_cardview">#8C9199</color>
+
+</resources>

@@ -1,0 +1,129 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="24dp"
+    app:cardCornerRadius="10dp"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_cardview_overlay" >
+
+    <!-- Capa con información encima -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/placa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:text="XXX-123"
+                    android:textSize="26sp"
+                    android:textColor="@color/text_on_light"
+                    android:fontFamily="@font/technor_medium" />
+
+                <ImageView
+                    android:id="@+id/logo_marca"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="center" />
+            </LinearLayout>
+
+            <!-- Línea superior con datos del vehículo -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/marca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Toyota"
+                    android:background="@drawable/item_badge"
+                    android:textSize="16sp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:textColor="@color/front_layout_primary"
+                    android:fontFamily="@font/technor_medium"
+                    android:alpha="0.6"
+                    android:layout_marginEnd="8dp" />
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="|"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:textColor="@color/front_layout_primary" />-->
+
+                <TextView
+                    android:id="@+id/modelo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Corolla"
+                    android:background="@drawable/item_badge"
+                    android:textSize="16sp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:textColor="@color/front_layout_primary"
+                    android:alpha="0.6"
+                    android:fontFamily="@font/technor_medium"
+                    android:layout_marginEnd="8dp" />
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="|"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:textColor="@color/front_layout_primary" />-->
+
+                <TextView
+                    android:id="@+id/sistema"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Automático"
+                    android:background="@drawable/item_badge"
+                    android:textSize="16sp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:textColor="@color/front_layout_primary"
+                    android:alpha="0.6"
+                    android:fontFamily="@font/technor_medium" />
+            </LinearLayout>
+
+            <!-- Línea inferior con placa en grande -->
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

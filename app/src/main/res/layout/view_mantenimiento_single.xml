@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    app:cardCornerRadius="12dp"
+    android:backgroundTint="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/item_style"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutFechas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/background_fecha_cardview"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/fecha_actual"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/medium"
+                android:letterSpacing="0.05"
+                android:text="9/10/2024"
+                android:textColor="#E29604"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="-"
+                android:textColor="#e29604"
+                android:textSize="12sp"
+                android:fontFamily="@font/medium" />
+
+            <TextView
+                android:id="@+id/fecha_prox"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:text="9/01/2025"
+                android:textColor="#e29604"
+                android:textSize="12sp"
+                android:fontFamily="@font/medium"
+                android:letterSpacing="0.05" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/notas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Se realizó tal cosa..."
+            android:textSize="12sp"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/technor_regular"
+            android:textColor="@color/white"
+            android:drawableStart="@drawable/icon_notas"
+            android:drawablePadding="5dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorHolder"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal">
+
+            <!-- Contenedor para el km actual -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginEnd="25dp">
+
+                <TextView
+                    android:id="@+id/km_actual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/technor_bold"
+                    android:gravity="center"
+                    android:text="23000 km"
+                    android:textColor="@color/colorHolder"
+                    android:letterSpacing="0.04" />
+
+                <TextView
+                    android:id="@+id/km_actual_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="km actual"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/technor_regular"
+                    android:textColor="@color/colorHolder" />
+            </LinearLayout>
+
+            <!-- Contenedor para el km próximo -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp">
+
+                <TextView
+                    android:id="@+id/km_prox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/technor_bold"
+                    android:gravity="center"
+                    android:text="23000 km"
+                    android:textColor="@color/colorEnd2"
+                    android:letterSpacing="0.04" />
+
+                <TextView
+                    android:id="@+id/km_prox_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="km próximo"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/technor_regular"
+                    android:textColor="@color/colorEnd2" />
+            </LinearLayout>
+
+            <!-- Contenedor para el costo -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginStart="25dp">
+
+                <TextView
+                    android:id="@+id/costo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/technor_semibold"
+                    android:gravity="center"
+                    android:text="S./ 45.5"
+                    android:textColor="@color/colorEnd2"
+                    android:letterSpacing="0.04" />
+
+                <TextView
+                    android:id="@+id/costo_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="costo"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/technor_regular"
+                    android:textColor="@color/colorEnd2" />
+            </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
