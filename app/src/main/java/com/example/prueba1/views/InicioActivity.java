@@ -1,56 +1,49 @@
 package com.example.prueba1.views;
 
 import android.content.Intent;
-import android.net.Uri;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.MediaController;
-import android.widget.VideoView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.prueba1.R;
-//https://lottiefiles.com/blog/working-with-lottie-animations/getting-started-with-lottie-animations-in-android-app
+
 public class InicioActivity extends AppCompatActivity {
 
-    VideoView videoView;
     private LinearLayout pantallaBlanca;
+    private Button btnEmpezar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
 
-//        videoView = findViewById(R.id.videoView);
-//        pantallaBlanca = findViewById(R.id.pantallaBlanca);
-        Button btnEmpezar = findViewById(R.id.btnEmpezar);
-//
-//        // Ruta del video en /res/raw/
-//        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video); // tu_video.mp4 en res/raw
-//        videoView.setVideoURI(uri);
-//        videoView.start();
-//
-//        // Al finalizar el video, mostrar pantalla blanca con animación
-//        videoView.setOnCompletionListener(mp -> {
-//            pantallaBlanca.setVisibility(View.VISIBLE);
-//            pantallaBlanca.setTranslationY(pantallaBlanca.getHeight()); // por si el layout aún no está medido
-//
-//            pantallaBlanca.post(() -> {
-//                pantallaBlanca.setTranslationY(pantallaBlanca.getHeight()+200);
-//                pantallaBlanca.animate()
-//                        .translationY(0)
-//                        .setDuration(600)
-//                        .setInterpolator(new AccelerateDecelerateInterpolator())
-//                        .start();
-//            });
-//        });
+        pantallaBlanca = findViewById(R.id.pantallaBlanca);
+        btnEmpezar = findViewById(R.id.btnEmpezar);
+
+        // Inicialmente ocultamos la pantalla blanca
+        pantallaBlanca.setVisibility(View.INVISIBLE);
+
+        // Esperar 3 segundos para iniciar la animación
+        new Handler().postDelayed(() -> {
+            pantallaBlanca.setVisibility(View.VISIBLE);
+
+            // Asegurar que el layout tenga medida antes de animar
+            pantallaBlanca.post(() -> {
+                pantallaBlanca.setTranslationY(pantallaBlanca.getHeight() + 200); // posición inicial fuera de pantalla
+                pantallaBlanca.animate()
+                        .translationY(0) // subir a su posición original
+                        .setDuration(600)
+                        .setInterpolator(new AccelerateDecelerateInterpolator())
+                        .start();
+            });
+        }, 1000); // 1 segundo
 
         btnEmpezar.setOnClickListener(v -> {
             Intent intent = new Intent(InicioActivity.this, LoginActivity.class);
