@@ -45,16 +45,6 @@
             android:textSize="24sp"
             tools:ignore="TextSizeCheck" />
 
-        <TextView
-            android:id="@+id/tv_fecha_filtro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Elige una fecha"
-            android:padding="8dp"
-            android:background="@drawable/item_style"
-            android:textColor="@color/black"
-            />
-
     </LinearLayout>
 
 
@@ -67,7 +57,71 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/layoutFiltroFechas"
         app:layout_constraintVertical_bias="0.02" />
+
+    <LinearLayout
+        android:id="@+id/layoutFiltroFechas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.01">
+
+        <!-- Fila con botones de selección de fechas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageButton
+                android:id="@+id/btnFechaInicio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Fecha de inicio"
+                android:padding="8dp"
+                android:src="@drawable/ic_calendario_inicio" />
+
+            <ImageButton
+                android:id="@+id/btnFechaFin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Fecha de fin"
+                android:padding="8dp"
+                android:src="@drawable/ic_calendario_fin" />
+
+            <ImageButton
+                android:id="@+id/btnLimpiarFechas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:contentDescription="Limpiar fechas"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_refresh" />
+        </LinearLayout>
+
+        <!-- Texto que muestra el rango de fechas seleccionado -->
+        <TextView
+            android:id="@+id/tvFechaSeleccionada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="Rango: no seleccionado"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
