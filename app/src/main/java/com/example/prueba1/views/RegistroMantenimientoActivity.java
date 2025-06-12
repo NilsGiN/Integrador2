@@ -254,7 +254,7 @@ public class RegistroMantenimientoActivity extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
                 month = month + 1; // Los meses empiezan desde 0
-                String selectedDate = dayOfMonth + "/" + month + "/" + year;
+                String selectedDate = String.format("%04d-%02d-%02d", year, month, dayOfMonth);
                 editText.setText(selectedDate); // Establece la fecha en el TextView
 
                 if (isFirstDate) {
@@ -267,7 +267,6 @@ public class RegistroMantenimientoActivity extends AppCompatActivity {
 
         // Establecer la fecha mínima como la fecha actual
         datePickerDialog.getDatePicker().setMinDate(calendar.getTimeInMillis());
-
         datePickerDialog.show();
     }
 }
