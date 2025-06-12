@@ -38,6 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:fontFamily="@font/technor_semibold"
             android:layout_gravity="center"
             android:textColor="@color/front_layout_primary"
@@ -45,15 +46,14 @@
             tools:ignore="TextSizeCheck" />
 
         <TextView
-            android:id="@+id/Tipo_id"
+            android:id="@+id/tv_fecha_filtro"
             android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginStart="10dp"
-            android:fontFamily="@font/semibold"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorNegrita"
-            android:textSize="24sp"
-            tools:ignore="TextSizeCheck" />
+            android:layout_height="wrap_content"
+            android:text="Elige una fecha"
+            android:padding="8dp"
+            android:background="@drawable/item_style"
+            android:textColor="@color/black"
+            />
 
     </LinearLayout>
 
