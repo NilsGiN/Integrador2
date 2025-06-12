@@ -1,6 +1,9 @@
 package com.example.prueba1.views;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,15 +17,20 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.work.OneTimeWorkRequest;
+import androidx.work.WorkManager;
 
 import com.example.prueba1.R;
 import com.example.prueba1.model.Car;
 import com.example.prueba1.presenters.CarAdapter;
+import com.example.prueba1.utils.NotificacionWorker;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -44,6 +52,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Solicitar permiso de notificaciones en Android 13+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.POST_NOTIFICATIONS}, 101);
+            }
+        }
+
+        // Dentro de onCreate o en algún lugar que quieras probar
+        OneTimeWorkRequest workRequest = new OneTimeWorkRequest.Builder(NotificacionWorker.class).build();
+        WorkManager.getInstance(this).enqueue(workRequest);
+
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
@@ -188,5 +207,17 @@ public class MainActivity extends AppCompatActivity {
                         Log.e("Firestore", "Error getting Tipo_Mantenimiento: ", task.getException());
                     }
                 });
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == 101) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "Permiso de notificaciones concedido", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Permiso de notificaciones denegado", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }

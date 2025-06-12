@@ -185,6 +185,7 @@ public class RegistroMantenimientoActivity extends AppCompatActivity {
                     MantenimientoMap.put("km_prox",km_prox_formatted);
                     MantenimientoMap.put("costo",costo_formatted);
                     MantenimientoMap.put("notas",notas);
+                    MantenimientoMap.put("notificado", false);
 
 
                     /* taskMap.put("due",dueDate);
