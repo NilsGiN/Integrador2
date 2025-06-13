@@ -84,9 +84,9 @@
 
             <ImageButton
                 android:id="@+id/btnFechaInicio"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="0.2"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="Fecha de inicio"
                 android:padding="8dp"
@@ -94,9 +94,9 @@
 
             <ImageButton
                 android:id="@+id/btnFechaFin"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="0.2"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="Fecha de fin"
                 android:padding="8dp"
@@ -104,9 +104,9 @@
 
             <ImageButton
                 android:id="@+id/btnLimpiarFechas"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="0.2"
                 android:padding="8dp"
                 android:contentDescription="Limpiar fechas"
                 android:background="?attr/selectableItemBackgroundBorderless"
