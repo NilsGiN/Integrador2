@@ -92,7 +92,7 @@
             android:hint="@string/hint_usuario"
             android:background="@android:color/transparent"
             android:inputType="text"
-            android:textColor="@color/white"
+            android:textColor="@color/front_layout_primary"
             android:textColorHint="@color/colorHolder"
             android:textSize="18sp" />
     </LinearLayout>
@@ -131,7 +131,7 @@
             android:fontFamily="@font/technor_regular"
             android:hint="@string/hint_contraseña"
             android:inputType="textPassword"
-            android:textColor="@color/white"
+            android:textColor="@color/front_layout_primary"
             android:textColorHint="@color/colorHolder"
             android:textSize="18sp" />
     </LinearLayout>
@@ -200,7 +200,7 @@
             android:fontFamily="@font/technor_medium"
             android:text="@string/registrate"
             android:textAllCaps="false"
-            android:textColor="@color/colorStart2"
+            android:textColor="@color/front_layout_primary"
             android:textSize="14sp"
             android:layout_marginStart="36dp"/>
     </LinearLayout>

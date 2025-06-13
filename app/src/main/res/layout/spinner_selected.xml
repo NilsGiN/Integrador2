@@ -14,7 +14,7 @@
         android:layout_weight="1"
         android:paddingStart="12dp"
         android:text="Placa"
-        android:textColor="@color/front_layout_primary"
+        android:textColor="@color/colorEnd2"
         android:fontFamily="@font/technor_regular"
         android:textSize="14sp" />
 

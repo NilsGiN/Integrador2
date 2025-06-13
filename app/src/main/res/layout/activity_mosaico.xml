@@ -16,7 +16,7 @@
         android:orientation="horizontal"
         app:layout_constraintVertical_bias="0.02"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,13 +44,17 @@
             android:textSize="24sp"
             tools:ignore="TextSizeCheck" />
 
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
         <ImageButton
             android:id="@+id/button_todos"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_marginStart="60dp"
             android:padding="8dp"
-            android:background="@android:color/transparent"
+            android:background="@drawable/item_style"
             android:contentDescription="@string/descripcion_boton_todo"
             app:srcCompat="@drawable/ic_mant_global"
             android:scaleType="fitCenter" />
@@ -59,12 +63,12 @@
 
     <ScrollView
         android:id="@+id/Scroll"
-        android:layout_width="match_parent"
-        android:layout_height="540dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Registrar_mantenimiento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
@@ -229,155 +233,6 @@
                 android:textSize="16sp" />
         </LinearLayout>
     </ScrollView>
-    <!--    <GridLayout-->
-    <!--        android:id="@+id/gridLayout"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:columnCount="2"-->
-    <!--        android:rowCount="4"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"-->
-    <!--        app:layout_constraintVertical_bias="0.15"-->
-    <!--        app:layout_constraintHorizontal_bias="0.5" >-->
-
-    <!--    <Button-->
-    <!--            android:id="@+id/button_aceites"-->
-    <!--            android:layout_width="160dp"-->
-    <!--            android:layout_height="115dp"-->
-    <!--            android:layout_margin="8dp"-->
-    <!--            android:background="@drawable/esquinas_mosaico"-->
-    <!--            android:drawableTop="@drawable/aceites_filtros"-->
-    <!--            android:drawablePadding="5dp"-->
-    <!--            android:fontFamily="@font/regular"-->
-    <!--            android:gravity="center"-->
-    <!--            android:paddingTop="20dp"-->
-    <!--            android:paddingBottom="20dp"-->
-    <!--            android:text="@string/aceites"-->
-    <!--            android:textAllCaps="false"-->
-    <!--            android:textColor="@color/back_layout"-->
-    <!--            android:textSize="14sp" />-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/button_refrigeracion"-->
-    <!--        android:layout_width="160dp"-->
-    <!--        android:layout_height="115dp"-->
-    <!--        android:layout_margin="8dp"-->
-    <!--        android:background="@drawable/esquinas_mosaico"-->
-    <!--        android:drawableTop="@drawable/refrigeracion"-->
-    <!--        android:drawablePadding="5dp"-->
-    <!--        android:fontFamily="@font/regular"-->
-    <!--        android:gravity="center"-->
-    <!--        android:paddingTop="20dp"-->
-    <!--        android:paddingBottom="20dp"-->
-    <!--        android:text="@string/refrigeracion"-->
-    <!--        android:textAllCaps="false"-->
-    <!--        android:textColor="@color/back_layout"-->
-    <!--        android:textSize="14sp" />-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/button_frenos"-->
-    <!--        android:layout_width="160dp"-->
-    <!--        android:layout_height="115dp"-->
-    <!--        android:layout_margin="8dp"-->
-    <!--        android:background="@drawable/esquinas_mosaico"-->
-    <!--        android:drawableTop="@drawable/frenos"-->
-    <!--        android:drawablePadding="5dp"-->
-    <!--        android:fontFamily="@font/regular"-->
-    <!--        android:gravity="center"-->
-    <!--        android:paddingTop="20dp"-->
-    <!--        android:paddingBottom="20dp"-->
-    <!--        android:text="@string/frenos"-->
-    <!--        android:textAllCaps="false"-->
-    <!--        android:textColor="@color/back_layout"-->
-    <!--        android:textSize="14sp" />-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/button_correas"-->
-    <!--        android:layout_width="160dp"-->
-    <!--        android:layout_height="115dp"-->
-    <!--        android:layout_margin="8dp"-->
-    <!--        android:background="@drawable/esquinas_mosaico"-->
-    <!--        android:drawableTop="@drawable/fajas_cadenas"-->
-    <!--        android:drawablePadding="5dp"-->
-    <!--        android:fontFamily="@font/regular"-->
-    <!--        android:gravity="center"-->
-    <!--        android:paddingTop="20dp"-->
-    <!--        android:paddingBottom="20dp"-->
-    <!--        android:text="@string/fajas"-->
-    <!--        android:textAllCaps="false"-->
-    <!--        android:textColor="@color/back_layout"-->
-    <!--        android:textSize="14sp" />-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/button_bujias"-->
-    <!--        android:layout_width="160dp"-->
-    <!--        android:layout_height="115dp"-->
-    <!--        android:layout_margin="8dp"-->
-    <!--        android:background="@drawable/esquinas_mosaico"-->
-    <!--        android:drawableTop="@drawable/bujias"-->
-    <!--        android:drawablePadding="5dp"-->
-    <!--        android:fontFamily="@font/regular"-->
-    <!--        android:gravity="center"-->
-    <!--        android:paddingTop="20dp"-->
-    <!--        android:paddingBottom="20dp"-->
-    <!--        android:text="@string/bujias"-->
-    <!--        android:textAllCaps="false"-->
-    <!--        android:textColor="@color/back_layout"-->
-    <!--        android:textSize="14sp" />-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/button_neumaticos"-->
-    <!--        android:layout_width="160dp"-->
-    <!--        android:layout_height="115dp"-->
-    <!--        android:layout_margin="8dp"-->
-    <!--        android:background="@drawable/esquinas_mosaico"-->
-    <!--        android:drawableTop="@drawable/neumaticos"-->
-    <!--        android:drawablePadding="5dp"-->
-    <!--        android:fontFamily="@font/regular"-->
-    <!--        android:gravity="center"-->
-    <!--        android:paddingTop="20dp"-->
-    <!--        android:paddingBottom="20dp"-->
-    <!--        android:text="@string/neumaticos"-->
-    <!--        android:textAllCaps="false"-->
-    <!--        android:textColor="@color/back_layout"-->
-    <!--        android:textSize="14sp" />-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/button_transmision"-->
-    <!--        android:layout_width="160dp"-->
-    <!--        android:layout_height="115dp"-->
-    <!--        android:layout_margin="8dp"-->
-    <!--        android:background="@drawable/esquinas_mosaico"-->
-    <!--        android:drawableTop="@drawable/sistema_transmision"-->
-    <!--        android:drawablePadding="5dp"-->
-    <!--        android:fontFamily="@font/regular"-->
-    <!--        android:gravity="center"-->
-    <!--        android:paddingTop="20dp"-->
-    <!--        android:paddingBottom="20dp"-->
-    <!--        android:text="@string/transmision"-->
-    <!--        android:textAllCaps="false"-->
-    <!--        android:textColor="@color/back_layout"-->
-    <!--        android:textSize="14sp" />-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/button_electrico"-->
-    <!--        android:layout_width="160dp"-->
-    <!--        android:layout_height="115dp"-->
-    <!--        android:layout_margin="8dp"-->
-    <!--        android:background="@drawable/esquinas_mosaico"-->
-    <!--        android:drawableTop="@drawable/sistema_electrico"-->
-    <!--        android:drawablePadding="5dp"-->
-    <!--        android:fontFamily="@font/regular"-->
-    <!--        android:gravity="center"-->
-    <!--        android:paddingTop="20dp"-->
-    <!--        android:paddingBottom="20dp"-->
-    <!--        android:text="@string/electrico"-->
-    <!--        android:textAllCaps="false"-->
-    <!--        android:textColor="@color/back_layout"-->
-    <!--        android:textSize="14sp" />-->
-    <!--    </GridLayout>-->
 
     <Button
         android:id="@+id/Registrar_mantenimiento"
@@ -385,7 +240,7 @@
         android:layout_height="64dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/button_registrar_mantenimiento"
+        android:layout_marginBottom="16dp"  android:background="@drawable/button_registrar"
         android:fontFamily="@font/technor_semibold"
         android:text="@string/registrar_mantenimiento"
         android:textAllCaps="false"
@@ -394,7 +249,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Scroll"
-        app:layout_constraintVertical_bias="0.5" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        /> </androidx.constraintlayout.widget.ConstraintLayout>

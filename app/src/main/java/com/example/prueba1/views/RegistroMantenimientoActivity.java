@@ -85,7 +85,7 @@ public class RegistroMantenimientoActivity extends AppCompatActivity {
         tiposMantenimiento.add(new TipoMantenimiento("tipo_8", "Sistema Eléctrico"));
 
         // Adaptador para el Spinner
-        ArrayAdapter<TipoMantenimiento> adapter = new ArrayAdapter<TipoMantenimiento>(this, R.layout.spinner_item, tiposMantenimiento) {
+        ArrayAdapter<TipoMantenimiento> adapter = new ArrayAdapter<TipoMantenimiento>(this,0, tiposMantenimiento) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
                 // Este es el layout que se muestra cuando el dropdown está cerrado
