@@ -8,64 +8,73 @@
     android:background="@color/back_layout"
     tools:context=".views.MainActivity">
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:fontFamily="@font/technor_semibold"
-        android:text="@string/titulo_main"
-        android:textColor="@color/front_layout_primary"
-        android:textSize="28sp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.05">
 
-    <ImageButton
-        android:id="@+id/button_ai"
-        android:layout_width="38dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="10dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/boton_ia"
-        android:padding="5dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_sparkle"
-        app:layout_constraintEnd_toStartOf="@+id/button_logout"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/technor_semibold"
+            android:text="@string/titulo_main"
+            android:textColor="@color/front_layout_primary"
+            android:textSize="28sp" />
 
-    <ImageButton
-        android:id="@+id/button_logout"
-        android:layout_width="38dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:padding="5dp"
-        android:src="@drawable/ic_logout"
-        android:scaleType="fitCenter"
-        android:background="@android:color/transparent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/button_ai"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/button_image"
+            android:contentDescription="@string/boton_ia"
+            android:padding="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_sparkle" />
+
+        <ImageButton
+            android:id="@+id/button_logout"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/button_image"
+            android:contentDescription="Boton de salir"
+            android:padding="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_logout" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/text_view_recordatorio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorStart2"
+        android:fontFamily="@font/technor_regular"
         android:gravity="center"
         android:padding="15dp"
         android:text="No se encontraron mantenimentos, recuerda registrar uno."
-        android:fontFamily="@font/technor_regular"
         android:textColor="@color/front_layout_primary"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:layout_constraintVertical_bias="0.03"
-        tools:layout_editor_absoluteX="-16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_layout"
+        app:layout_constraintVertical_bias="0.03" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/Recyclerview2"
@@ -84,14 +93,14 @@
         android:id="@+id/Plus"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/button_plus"
         android:contentDescription="@string/plus_button_description"
         android:drawableTop="@drawable/icon_plus"
         android:fontFamily="@font/technor_semibold"
         android:gravity="center_horizontal"
-        android:paddingTop="15dp"
+        android:paddingTop="14dp"
         android:elevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

@@ -53,8 +53,8 @@
             android:id="@+id/button_todos"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:padding="8dp"
-            android:background="@drawable/item_style"
+            android:padding="10dp"
+            android:background="@drawable/button_image"
             android:contentDescription="@string/descripcion_boton_todo"
             app:srcCompat="@drawable/ic_mant_global"
             android:scaleType="fitCenter" />
