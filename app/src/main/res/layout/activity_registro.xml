@@ -13,8 +13,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintVertical_bias="0.04"
+        app:layout_constraintVertical_bias="0"
         android:fontFamily="@font/technor_bold"
         android:text="@string/registrate"
         android:textColor="@color/front_layout_primary"
@@ -65,65 +65,105 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-    <EditText
-        android:id="@+id/editTextText"
+    <LinearLayout
+        android:id="@+id/linearEditUsuario"
         android:layout_width="0dp"
         android:layout_height="64dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintVertical_bias="0.07"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
         android:background="@drawable/item_style"
-        android:padding="8dp"
-        android:ems="10"
-        android:fontFamily="@font/technor_regular"
-        android:hint="@string/hint_usuario"
-        android:inputType="text"
-        android:textColor="@color/white"
-        android:textColorHint="@color/colorHolder"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_max="320dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.07">
 
-    <EditText
-        android:id="@+id/editTextTextPassword"
+        <ImageView
+            android:id="@+id/icon_usuario"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_user"
+            android:contentDescription="@string/ic_user" />
+
+
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="10"
+            android:fontFamily="@font/technor_regular"
+            android:hint="@string/hint_usuario"
+            android:background="@android:color/transparent"
+            android:inputType="text"
+            android:textColor="@color/front_layout_primary"
+            android:textColorHint="@color/colorHolder"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearEditPassword"
         android:layout_width="0dp"
         android:layout_height="64dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintVertical_bias="0.05"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
         android:background="@drawable/item_style"
-        android:padding="8dp"
-        android:ems="10"
-        android:fontFamily="@font/technor_regular"
-        android:hint="@string/hint_contraseña"
-        android:inputType="textPassword"
-        android:textColor="@color/white"
-        android:textColorHint="@color/colorHolder"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_max="320dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/linearEditUsuario"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.05">
+
+        <ImageView
+            android:id="@+id/icon_password"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_pass"
+            android:contentDescription="@string/ic_password" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:fontFamily="@font/technor_regular"
+            android:hint="@string/hint_contraseña"
+            android:inputType="textPassword"
+            android:textColor="@color/front_layout_primary"
+            android:textColorHint="@color/colorHolder"
+            android:textSize="18sp" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/button"
         android:layout_width="0dp"
         android:layout_height="64dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/button_registrar"
         android:fontFamily="@font/technor_semibold"
         android:text="@string/bttmregistrar"
         android:textAllCaps="false"
         android:textColor="@color/back_layout"
         android:textSize="20sp"
+        app:layout_constraintWidth_max="320dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/linearEditPassword"
         app:layout_constraintVertical_bias="0.099" />
 
     <LinearLayout
@@ -157,7 +197,7 @@
             android:padding="0dp"
             android:text="@string/iniciosesion"
             android:textAllCaps="false"
-            android:textColor="@color/colorStart2"
+            android:textColor="@color/front_layout_primary"
             android:textSize="14sp"
             android:layout_marginStart="36dp"/>
     </LinearLayout>
